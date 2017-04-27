@@ -1,0 +1,212 @@
+body{
+	font:12px/24px microsoft yahei,"微软雅黑",sans-serif;
+	color:#333;
+	background-color:#fff;
+}
+html,body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,form,fieldset,input,textarea,p,blockquote,th,td{
+	padding:0;
+	margin:0;
+}
+label {
+	cursor:pointer;
+}
+#header{ width:100%; margin:0 auto;}
+#top{text-align:right;margin-right: 40px;border-bottom: 1px solid #E5E5E5;}
+#top a{ color:#666; font-size:12px;padding-left: 15px;line-height: 30px;}
+#top a:hover{ color:#FF0000;}
+#xia a img{ border:0px solid}
+#logo{ float:left;margin-left:190px; display:inline;}
+#search{ float:left; margin:20px 50px 10px 70px; width:500px; display:inline;}
+#search input{ border: 1px solid #E33D0D; height:28px; width:403px; background:#F7F7F7 url(../images/s.jpg) no-repeat left; text-indent:2em; border-right:0px; float:left;}
+#search a{ display:block; float:left; background:url(../images/index_09.jpg) no-repeat; color:#FFF; font-weight:700;width:89px; height:32px; text-align:center; line-height:32px;}
+#search #xuan a{ color:#666; background:none; font-weight:200; font-size:12px; float:left; display:block; width:58px; text-align:center;}
+#search #xuan a:hover{ color:#FF0000;}
+#header #xia a img{ border:0px solid}
+#sp{ float:left; display:inline; margin-top:20px;}
+ol,ul,li{
+	list-style:none;
+}
+em,b,i,u{
+	font-style:normal;
+	font-weight:normal;
+	text-decoration:none;
+}
+table{
+	border-collapse:collapse;
+}
+fieldset,img,input,button{ 
+	border:none;
+}
+input,select,textarea{ 
+	font-family:microsoft yahei; 
+	border:1px solid #ccc;
+}
+a{
+	text-decoration:none;
+    color:#666;
+    outline:none;
+}
+a:hover{
+	text-decoration:none;
+	color:#ff4c00;
+}
+.w980{
+	width:980px; 
+	margin:0 auto;
+} 
+.screen_information{
+	overflow:hidden; 
+	padding-top:5px;
+}
+.screen_information p{ 
+	line-height:24px; 
+	color:#999; 
+	font-family:"宋体";
+}
+.btn { 
+	cursor:pointer;
+}
+.shopping_tit{ 
+	height:70px; 
+	background:url(../images/linebg2_03.png) repeat-x bottom left; 
+	line-height:70px;
+}
+.shopping_tit p{ 
+	width:80px; 
+	height:68px; 
+	border-bottom:2px  solid  #ff4c00;
+}
+.shopping_nameclass{ 
+	height:38px; 
+	overflow:hidden;
+}
+.shopping_order{ 
+	overflow:hidden; 
+}
+.store_name { 
+	width:960px; 
+	height:30px; 
+	padding:0 10px; 
+	overflow:hidden; 
+}
+.store_name dl{
+	width:960px; 
+	height:30px; 
+	line-height:30px;   
+	overflow:hidden; 
+}
+.store_name dt{ 
+	float:left; 
+	width:270px; 
+	overflow:hidden;
+}
+.duo_input1 { 
+	display:block;  
+	float:left;  
+	padding:6px 10px 0 0; 
+}
+.duo_input { 
+	display:block;  
+	float:left;  
+	padding:8px 10px 0 0; 
+}
+.store_name dd{ 
+	float:right; 
+	width:600px; 
+	text-align:right; 
+	font-family:"宋体"; 
+	color:#ff4c00;
+}
+.store_conten{ 
+	width:978px; 
+	overflow:hidden; 
+	border:1px solid #dfdfdf; 
+	border-bottom:none; 
+	color:#666;
+}
+.listing_table{   
+	overflow:hidden;
+}
+.listing_table td{ 
+	padding:15px  10px; 
+	border-bottom:1px solid #dfdfdf; 
+	overflow:hidden;
+}
+.prod_inform_w{ 
+	overflow:hidden; 
+	height:80px;
+}
+.prod_inform_w dt{ 
+	float:left; 
+	width:80px; 
+	height:80px; 
+	overflow:hidden; 
+	margin-right:25px;
+	}
+.prod_inform_w dd{ 
+	float:left; 
+	height:80px; 
+	width:220px; 
+}
+.prod_inform_w dd p{ 
+	font-weight:bold; 
+	color:#333; 
+	line-height:20px; 
+}
+.prod_inform_w dd p span{ 
+	font-family:"宋体"; 
+	line-height:20px; 
+	font-weight:normal; 
+	color:#999;
+}
+.settlement{ 
+	overflow:hidden; 
+}
+.settlement table td{ 
+	padding:5px;
+}
+.settlement button{
+	width: 80px;
+	height: 30px;
+}
+.shopp_cart_operation{ 
+	height:30px; 
+	line-height:30px; 
+	overflow:hidden;
+}
+.shopp_cart_operation p{ 
+	float:left; 
+	margin-right:10px; 
+	color:#666;
+}
+.shop_total{ 
+	line-height:30px;
+}
+.js_bnt{ 
+	float:right; 
+	border: 1px solid #E5E5E5;
+	line-height:30px; 
+	text-align:center;
+}#foot{ 
+	margin-top:15px;
+	background:#FFF; 
+	padding-bottom:20px; 
+	border-top: 1px solid #E5E5E5;
+}
+#footer{ 
+	width:990px;
+	margin:0 auto;
+}
+#z{ 
+	margin-left:250px;
+}
+.links{margin-left:90px;}
+.links a{
+    padding: 0 6px;
+}
+.copyright{
+	margin-top: 6px;
+	margin-left:250px;
+    line-height: 18px;
+    margin-bottom: 10px;
+}

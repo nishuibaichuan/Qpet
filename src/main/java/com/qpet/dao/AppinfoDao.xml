@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.qpet.dao.AppinfoDao" >
+  <resultMap id="BaseResultMap" type="com.qpet.entity.Appinfo" >
+    <id column="aid" property="aid" jdbcType="INTEGER" />
+    <result column="name" property="name" jdbcType="VARCHAR" />
+    <result column="appdescription" property="appdescription" jdbcType="VARCHAR" />
+    <result column="appcopyright" property="appcopyright" jdbcType="VARCHAR" />
+    <result column="appurl" property="appurl" jdbcType="VARCHAR" />
+    <result column="createTime" property="createtime" jdbcType="TIMESTAMP" />
+    <result column="apptitle" property="apptitle" jdbcType="VARCHAR" />
+    <result column="appkeywords" property="appkeywords" jdbcType="VARCHAR" />
+    <result column="phone" property="phone" jdbcType="VARCHAR" />
+    <result column="email" property="email" jdbcType="VARCHAR" />
+    <result column="address" property="address" jdbcType="VARCHAR" />
+  </resultMap>
+  <sql id="Base_Column_List" >
+    aid, name, appdescription, appcopyright, appurl, createTime, apptitle, appkeywords, 
+    phone, email,address
+  </sql>
+  <select id="findById" resultMap="BaseResultMap" parameterType="java.lang.Integer" >
+    select 
+    <include refid="Base_Column_List" />
+    from t_appinfo
+    where aid = #{aid,jdbcType=INTEGER}
+  </select>
+  <update id="update" parameterType="com.qpet.entity.Appinfo" >
+    update t_appinfo
+    <set >
+      <if test="name != null" >
+        name = #{name,jdbcType=VARCHAR},
+      </if>
+      <if test="appdescription != null" >
+        appdescription = #{appdescription,jdbcType=VARCHAR},
+      </if>
+      <if test="appcopyright != null" >
+        appcopyright = #{appcopyright,jdbcType=VARCHAR},
+      </if>
+      <if test="appurl != null" >
+        appurl = #{appurl,jdbcType=VARCHAR},
+      </if>
+      <if test="createtime != null" >
+        createTime = #{createtime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="apptitle != null" >
+        apptitle = #{apptitle,jdbcType=VARCHAR},
+      </if>
+      <if test="appkeywords != null" >
+        appkeywords = #{appkeywords,jdbcType=VARCHAR},
+      </if>
+      <if test="phone != null" >
+        phone = #{phone,jdbcType=VARCHAR},
+      </if>
+      <if test="email != null" >
+        email = #{email,jdbcType=VARCHAR},
+      </if>
+      <if test="address != null" >
+        address = #{address,jdbcType=VARCHAR},
+      </if>
+    </set>
+    where aid = #{aid,jdbcType=INTEGER}
+  </update>
+</mapper>

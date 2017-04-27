@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.qpet.dao.PetKnowledgeDao" >
+  <resultMap id="BaseResultMap" type="com.qpet.entity.PetKnowledge" >
+    <id column="pkid" property="pkid" jdbcType="INTEGER" />
+    <result column="csid" property="csid" jdbcType="INTEGER" />
+    <result column="pkname" property="pkname" jdbcType="VARCHAR" />
+    <result column="summary" property="summary" jdbcType="VARCHAR" />
+    <result column="label" property="label" jdbcType="VARCHAR" />
+    <result column="copyright" property="copyright" jdbcType="VARCHAR" />
+    <result column="pkdescription" property="pkdescription" jdbcType="VARCHAR" />
+    <result column="createtime" property="createtime" jdbcType="TIMESTAMP" />
+    <result column="creator" property="creator" jdbcType="VARCHAR" />
+  </resultMap>
+  <sql id="Base_Column_List" >
+    pkid, csid, pkname, summary,label , copyright,pkdescription, createtime, creator
+  </sql>
+  <select id="findById" resultMap="BaseResultMap" parameterType="java.lang.Integer" >
+    select 
+    <include refid="Base_Column_List" />
+    from t_pet_knowledge
+    where pkid = #{pkid,jdbcType=INTEGER}
+  </select>
+  <!--根据创建者id，进行分页查询角色信息  -->
+  <select id="findByPage" resultType="com.qpet.entity.PetKnowledge">
+		select <include refid="Base_Column_List" />
+		 from t_pet_knowledge
+		order by pkid ASC
+		limit #{begin},#{pageSize}
+  </select>	  
+  <select id="totalSize" resultType="java.lang.Long">
+		select count(*) from t_pet_knowledge
+  </select>
+  
+  <select id="findByChannelId" resultMap="BaseResultMap" parameterType="java.lang.Integer" >
+    select 
+    <include refid="Base_Column_List" />
+    from t_pet_knowledge
+    where csid = #{csid,jdbcType=INTEGER}
+  </select>
+  <select id="find" resultMap="BaseResultMap">
+    select 
+    <include refid="Base_Column_List" />
+    from t_pet_knowledge
+  </select>
+  <delete id="delete" parameterType="java.lang.Integer" >
+    delete from t_pet_knowledge
+    where pkid = #{pkid,jdbcType=INTEGER}
+  </delete>
+  <insert id="save" parameterType="com.qpet.entity.PetKnowledge" >
+    insert into t_pet_knowledge
+    <trim prefix="(" suffix=")" suffixOverrides="," >
+      <if test="pkid != null" >
+        pkid,
+      </if>
+      <if test="csid != null" >
+        csid,
+      </if>
+      <if test="pkname != null" >
+        pkname,
+      </if>
+      <if test="summary != null" >
+        summary,
+      </if>
+      <if test="label != null" >
+        label,
+      </if>
+      <if test="copyright != null" >
+        copyright,
+      </if>
+      <if test="pkdescription != null" >
+        pkdescription,
+      </if>
+      <if test="createtime != null" >
+        createtime,
+      </if>
+      <if test="creator != null" >
+        creator,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides="," >
+      <if test="pkid != null" >
+        #{pkid,jdbcType=INTEGER},
+      </if>
+      <if test="csid != null" >
+        #{csid,jdbcType=INTEGER},
+      </if>
+      <if test="pkname != null" >
+        #{pkname,jdbcType=VARCHAR},
+      </if>
+      <if test="summary != null" >
+        #{summary,jdbcType=VARCHAR},
+      </if>
+      <if test="label != null" >
+        #{label,jdbcType=VARCHAR},
+      </if>
+      <if test="copyright != null" >
+        #{copyright,jdbcType=VARCHAR},
+      </if>
+      <if test="pkdescription != null" >
+        #{pkdescription,jdbcType=VARCHAR},
+      </if>
+      <if test="createtime != null" >
+        #{createtime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="creator != null" >
+        #{creator,jdbcType=VARCHAR},
+      </if>
+    </trim>
+  </insert>
+  <update id="update" parameterType="com.qpet.entity.PetKnowledge" >
+    update t_pet_knowledge
+    <set >
+      <if test="csid != null" >
+        csid = #{csid,jdbcType=INTEGER},
+      </if>
+      <if test="pkname != null" >
+        pkname = #{pkname,jdbcType=VARCHAR},
+      </if>
+      <if test="summary != null" >
+        summary = #{summary,jdbcType=VARCHAR},
+      </if>
+      <if test="label != null" >
+        label = #{label,jdbcType=VARCHAR},
+      </if>
+      <if test="copyright != null" >
+        copyright = #{copyright,jdbcType=VARCHAR},
+      </if>
+      <if test="pkdescription != null" >
+        pkdescription = #{pkdescription,jdbcType=VARCHAR},
+      </if>
+      <if test="createtime != null" >
+        createtime = #{createtime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="creator != null" >
+        creator = #{creator,jdbcType=VARCHAR},
+      </if>
+    </set>
+    where pkid = #{pkid,jdbcType=INTEGER}
+  </update>
+</mapper>

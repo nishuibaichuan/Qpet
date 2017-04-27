@@ -1,0 +1,265 @@
+#header{ 
+	width:100%; 
+	margin:0 auto;
+}
+#top{
+	text-align:right;
+	margin-right: 40px;
+	border-bottom: 1px solid #E5E5E5;
+}
+#top a{ 
+	color:#666; 
+	font-size:12px;
+	line-height: 30px;
+	padding-left: 15px;
+}
+#top a:hover{ 
+	color:#FF0000;
+}
+#xia a img{ 
+	border:0px solid;
+}
+#logo{ 
+	float:left;
+	margin-left:190px; 
+	display:inline;
+}
+#search{ 
+	float:left; 
+	margin:20px 50px 10px 70px; 
+	width:500px; 
+	display:inline;
+}
+#search input{ 
+	border: 1px solid #E33D0D; 
+	height:28px; 
+	width:403px; 
+	background:#F7F7F7 url(../images/s.jpg) no-repeat left; 
+	text-indent:2em; border-right:0px; float:left;
+}
+#search a{ 
+	display:block; 
+	float:left; 
+	background:url(../images/index_09.jpg) no-repeat; 
+	color:#FFF; 
+	font-weight:700;
+	width:89px; 
+	height:32px; 
+	text-align:center; 
+	line-height:32px;
+	}
+#search #xuan a{ 
+	color:#666; 
+	background:none; 
+	font-weight:200; 
+	font-size:12px; 
+	float:left; 
+	display:block; 
+	width:58px; 
+	text-align:center;
+}
+#search #xuan a:hover{ 
+	color:#FF0000;
+}
+#header #xia a img{ 
+	border:0px solid;
+}
+#sp{ 
+	float:left; 
+	display:inline; 
+	margin-top:20px;
+}
+.Qmainf{
+	position: relative;
+	width: 1000px;
+	height: 450px;
+	top: 100px;
+	margin: 0 auto;
+	/*background-color: blue;*/
+}
+.Qmaibf-left{
+	float: left;
+	position: absolute;
+	width: 180px;
+	height: 450px;
+	/*background-color: violet;*/
+}
+/*sidebar*/
+.sidebar{
+    float: left;
+    width: 180px;
+    height: 440px;
+    box-shadow: 1px 1px 1px 1px #e1e1e1;
+}
+.sidebar > h3{
+    width: 100%;
+    height: 41px;
+    line-height: 41px;
+    text-align: center;
+    font-size: 15px;
+    background: #f40;
+    color: #fff;
+}
+.sidebar-info{
+    position: relative;
+    width: 178px;
+}
+.side-li{
+    position: relative;
+    z-index: 5000;
+}
+.side-li > li{
+    width: 160px;
+    margin: auto;
+    height: 40px;
+    line-height: 40px;
+    text-align: center;
+    cursor: pointer;
+    font-size: 14px;
+}
+.Qmaibf-middle{
+	position: absolute;
+	float: right;
+	margin-left: 180px;
+	width: 820px;
+}
+.Qmaibf-middletop{
+	float: left;
+	width: 100%;
+	height: 140px;
+	/*background-color: saddlebrown;*/
+}
+.Qmaibf-middletop .huiyuanxx{
+	float: left;
+	width: 100%;
+	height: 83px;
+	border-bottom:1px solid #dfdfdf; 
+	border-top:1px solid #dfdfdf; 
+	background-color: #E5E5E5;
+}
+.huiyuantouxiang{
+	float: left;
+	width: 90px;
+	height: 80px;
+	/*border: 1px solid #A9AFB7;*/
+	/*border-radius: 50%;*/
+	margin-left: 30px;
+}
+.huiyuanxinming{
+	float: left;
+	width: 500px;
+	height: 60px;
+	/*border: 1px solid #A9AFB7;*/
+	margin-left: 30px;
+	margin-top: 10px;
+}
+.huiyuanxinming span{
+	line-height: 60px;
+	font-family: "微软雅黑";
+	font-size: 18px;
+}
+.Qmaibf-middletop .shangpxx{
+	float: left;
+	width: 100%;
+	height: 54px;
+	/*background-color: yellow;*/
+	border-bottom:1px solid #dfdfdf; 
+}
+.Qmaibf-middletop .shangpxx ul li span{
+	float: left;
+	line-height: 55px;
+	font-size: 16px;
+	margin-left: 54px;
+	font-family: "微软雅黑";
+}
+.Qmaibf-middletop .shangpxx .fenggefu{
+	color: #E5E5E5;
+}
+.Qmaibf-middlefooter{
+	position: relative;
+	float: left;
+	width: 100%;
+	height: 300px;
+	border: 1px solid #E5E5E5;
+}
+.Qmaibf-middlefooter .wuliu{
+	width: 100%;
+	height: 40px;
+	background-color: #E5E5E5;
+	border-bottom:1px solid #dfdfdf; 
+}
+.Qmaibf-middlefooter .wuliu span{
+	font-size: 18px;
+	line-height: 40px;
+	left: 20px;
+	position: absolute;
+}
+.Qmaibf-middlefooter button{
+	margin-left: 750px;
+	margin-top: 5px;
+}
+.listing_table{  
+	overflow:hidden;
+	border-bottom:1px solid #dfdfdf; 
+}
+.listing_table td{ 
+	padding:15px  10px; 
+	overflow:hidden;
+}
+.prod_inform_w{ 
+	overflow:hidden; 
+	height:80px;
+}
+.prod_inform_w dt{ 
+	float:left; 
+	width:80px; 
+	height:80px; 
+	overflow:hidden; 
+	margin-right:25px;
+}
+.prod_inform_w dd{ 
+	float:left; 
+	height:80px; 
+	width:100px; 
+}
+.prod_inform_w dd p{ 
+	font-weight:bold; 
+	color:#333; 
+	line-height:20px; 
+}
+.prod_inform_w dd p span{ 
+	font-family:"宋体"; 
+	line-height:20px; 
+	font-weight:normal; 
+	color:#999;
+}
+#foot{ 
+	position: relative;
+	background:#FFF;
+	top:100px; 
+	width:990px;
+	margin:0 auto;
+	padding-bottom:20px;
+}
+#footer a{ 
+	color:#333; 
+	font-size:12px;
+} 
+#footer a:hover{ 
+	color:#CC0000;
+} 
+.links{
+	margin-left:90px;
+}
+#z{ 
+	margin-left:250px;
+}
+.links a{
+    padding: 0 6px;
+}
+.copyright{
+	margin-top: 6px;
+	margin-left:250px;
+    line-height: 18px;
+    margin-bottom: 10px;
+}

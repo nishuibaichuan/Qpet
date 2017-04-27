@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:aop="http://www.springframework.org/schema/aop"
+	xmlns:tx="http://www.springframework.org/schema/tx"
+	xmlns:mvc="http://www.springframework.org/schema/mvc"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans 
+	http://www.springframework.org/schema/beans/spring-beans.xsd
+	http://www.springframework.org/schema/context
+	http://www.springframework.org/schema/context/spring-context.xsd
+	http://www.springframework.org/schema/aop
+	http://www.springframework.org/schema/aop/spring-aop.xsd
+	http://www.springframework.org/schema/tx 
+	http://www.springframework.org/schema/tx/spring-tx.xsd
+	http://www.springframework.org/schema/mvc 
+	http://www.springframework.org/schema/mvc/spring-mvc.xsd ">
+    <!-- 扫描controller -->
+    <mvc:annotation-driven/>
+    <!-- 由于spring mvc拦截了所有请求，通过"/"，所有只有配置标签获取静态资源文件 -->
+    <!--静态资源文件配置  -->
+    <mvc:resources location="/resources/" mapping="/resources/**"/>
+    <!-- 图片上传目录 -->
+    <mvc:resources location="/upload/" mapping="/upload/**" />
+    <!-- 扫描controller路径 -->
+    <context:component-scan base-package="com.qpet.controller" />
+    
+    <!-- 视图解析器 -->
+    <bean class="org.springframework.web.servlet.view.InternalResourceViewResolver">
+		<property name="prefix" value="/WEB-INF/"/>
+		<property name="suffix" value=".jsp"/>
+	</bean>  
+	
+	<!-- 配置登陆访问拦截器 -->
+	<mvc:interceptors>
+		<mvc:interceptor>
+			<!-- 拦截admin路径下所有页面 -->
+			<mvc:mapping path="/admin/**"/>
+			<!-- 不拦截的页面 -->
+			<mvc:exclude-mapping path="/admin/login"/>
+			<mvc:exclude-mapping path="/admin/drawCheckCode"/>
+			<!-- 对拦截的页面都到这个拦截器中进行判断是否登录，否则拦截，跳转到登录界面 -->
+			<bean class="com.qpet.interceptor.LoginInterceptor" /> 
+		</mvc:interceptor>
+	</mvc:interceptors>
+	
+	<!-- 文件解析器 -->
+	<bean id="multipartResolver" class="org.springframework.web.multipart.commons.CommonsMultipartResolver">
+		<property name="maxUploadSize">
+			<value>1000000</value>
+		</property> 
+        <property name="defaultEncoding">
+        	<value>UTF-8</value>
+        </property> 
+	</bean>
+</beans>
